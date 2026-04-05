@@ -1,3 +1,4 @@
+# updated version
 from flask import Flask, render_template, request
 import torch
 import torch.nn as nn
@@ -18,7 +19,8 @@ class_names = [
     'Otter', 'Penguin', 'Puffers', 'Sea Rays',
     'Sea Urchins', 'Seahorse', 'Seal', 'Sharks',
     'Shrimp', 'Squid', 'Starfish', 'Turtle', 'Whale'
-]num_classes = len(class_names)
+]
+num_classes = len(class_names)
 
 # Build model
 def build_model(num_classes):
