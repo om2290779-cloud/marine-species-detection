@@ -1,7 +1,0 @@
-flask
-gunicorn==21.2.0
-torch
-torchvision
-opencv-python
-pillow
-numpy
