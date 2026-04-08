@@ -1,3 +1,5 @@
+print("NEW VERSION OF APP IS RUNNING")
+# updated version
 from flask import Flask, render_template, request
 import torch
 import torch.nn as nn
@@ -12,9 +14,13 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Paths
 model_path = "marine_species_model.pth"
-dataset_path = r"C:\Users\Om\Documents\dataset_split\train"
-
-class_names = sorted(os.listdir(dataset_path))
+class_names = [
+    'Clams', 'Corals', 'Crabs', 'Dolphin', 'Eel',
+    'Jelly Fish', 'Lobster', 'Nudibranchs', 'Octopus',
+    'Otter', 'Penguin', 'Puffers', 'Sea Rays',
+    'Sea Urchins', 'Seahorse', 'Seal', 'Sharks',
+    'Shrimp', 'Squid', 'Starfish', 'Turtle', 'Whale'
+]
 num_classes = len(class_names)
 
 # Build model
